@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     // Variables related to animation
     Animator animator;
-    Vector2 moveDirection = new Vector2(1,1);
+    Vector2 moveDirection = new Vector2(1,0);
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +34,8 @@ public class PlayerController : MonoBehaviour
             moveDirection.Normalize();
         }
 
-        animator.SetFloat("Move X", moveDirection.x);
-        animator.SetFloat("Move Y", moveDirection.y);
+        animator.SetFloat("Look X", moveDirection.x);
+        animator.SetFloat("Look Y", moveDirection.y);
         animator.SetFloat("Speed", move.magnitude);
     }
 
